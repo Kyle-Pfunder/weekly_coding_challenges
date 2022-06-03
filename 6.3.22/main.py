@@ -73,12 +73,13 @@ while True:
 selection: """))
 
         if selection not in range(1,4): error()
-        elif selection == 1: challengeA()
-        elif selection == 2: challengeB()
         else:
-            system("cls")
-            exit()
+            if selection == 1: challengeA()
+            elif selection == 2: challengeB()
+            else:
+                system("cls")
+                exit()
 
-        print("\n\n")
-        system("pause")
+            print("\n\n")
+            system("pause")
     except ValueError: error()
